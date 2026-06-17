@@ -27,12 +27,12 @@ jobs:
       
       - name: Clone luci-app-ssr-plus
         run: |
-          git clone --depth=1 https://github.com/kiddin9/kwrt-packages.git
-          ls kwrt-packages/luci-app-ssr-plus/
+          git clone --depth=1 https://github.com/kenzok8/small-package.git
+          ls small-package/luci-app-ssr-plus/
       - name: Parse version from Makefile
         id: setver
         run: |
-          cd kwrt-packages/luci-app-ssr-plus
+          cd small-package/luci-app-ssr-plus
           ver=$(grep -E '^PKG_VERSION:=' Makefile | cut -d= -f2 | tr -d ' ')
           rel=$(grep -E '^PKG_RELEASE:=' Makefile | cut -d= -f2 | tr -d ' ')
           fullver="${ver}-r${rel}"
