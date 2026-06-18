@@ -121,7 +121,7 @@ jobs:
           body_path: release_notes.md
 
       - name: Upload run files as release assets
-        uses: softprops/action-gh-release@v2.1.0
+        uses: softprops/action-gh-release@v3
         with:
           tag_name: ${{ env.LATEST_TAG }}
           name: "PassWall-${{ env.LATEST_TAG }}"
